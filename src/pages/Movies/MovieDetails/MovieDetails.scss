@@ -1,0 +1,44 @@
+.movie {
+    &__content {
+        margin-left: 0;
+        @media (min-width: 600px) {
+            margin-left: 20px;
+        }
+        @media (min-width: 992px) {
+            margin-left: 40px;
+        }
+    }
+    &__image {
+        img {
+            display: block;
+            border-radius: 6px;
+            width: 100%;
+            max-width: 380px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        margin: 15px 0;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: left;
+        }
+    }
+
+    &__desc {
+        color: #e2e2e2;
+        margin: 10px 0 20px;
+        max-width: 428px;
+    }
+
+    &__genre {
+        background-color: #040752;
+        display: inline-block;
+        padding: 4px 10px;
+        margin: 6px 0 15px;
+        border-radius: 6px;
+        margin-right: 6px;
+    }
+}

@@ -1,0 +1,60 @@
+.movie {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+    position: relative;
+    height: 100%;
+
+    &__img {
+        position: relative;
+        overflow: hidden;
+        flex-grow: 1;
+        height: 90%;
+        border-radius: 6px;
+
+        & img {
+            display: block;
+            max-width: 100%;
+            height: 100%;
+            transition: transform 0.7s 0.1s ease;
+        }
+
+        &Overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 25px;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+        &:hover img {
+            transform: scale(1.09);
+        }
+        &:hover &Overlay {
+            transform: translateY(0);
+        }
+    }
+
+    &__heading {
+        padding: 6px 0;
+        font-weight: 400;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    &__rating {
+        position: absolute;
+        top: 8px;
+        right: 0;
+
+        padding: 8px 12px;
+        background-color: $lightBgColor;
+    }
+}

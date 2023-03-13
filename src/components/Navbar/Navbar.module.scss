@@ -1,0 +1,26 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    gap: 35px;
+
+    &__links {
+        display: flex;
+        gap: 18px;
+        color: #aaa;
+    }
+    &__auth {
+        display: flex;
+        gap: 18px;
+        margin-left: auto;
+        color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+        &__links,
+        &__auth {
+            display: none;
+        }
+    }
+}
